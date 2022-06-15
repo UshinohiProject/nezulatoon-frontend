@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-function App() {
+import ScrollToTop from './components/molecules/ScrollToTop'
+import Top from './components/molecules/Top'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Nezulatoon
-        </p>
-        <a
-          className="App-link"
-          href="https://ushinohi.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ushinohi Project with S
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path={`/`} element={<Top />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
