@@ -1,3 +1,6 @@
+# nezulatoon-frontend
+[![Netlify Status](https://api.netlify.com/api/v1/badges/65c27deb-027a-4047-a2fa-225a45f35c9e/deploy-status)](https://app.netlify.com/sites/nezulatoon/deploys)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
