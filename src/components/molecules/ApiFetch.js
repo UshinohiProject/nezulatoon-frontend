@@ -13,7 +13,7 @@ const ApiFetch = () => {
             .then(data => {
                 setWeapon(data)
             })
-        },[])
+        },[apiURL])
 
     return (
         <div>
