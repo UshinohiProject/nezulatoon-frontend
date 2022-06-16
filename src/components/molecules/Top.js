@@ -7,7 +7,7 @@ function Top() {
     <div className="App">
       <header className="App-header">
         <ApiFetch />
-        <a href="/" class="btn btn--orange">Shoot</a>
+        <a href="/" className="btn btn--orange">Shoot</a>
       </header>
     </div>
   );

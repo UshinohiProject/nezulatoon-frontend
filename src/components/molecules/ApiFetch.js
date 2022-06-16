@@ -4,10 +4,11 @@ const ApiFetch = () => {
     const baseURL = process.env.REACT_APP_BASE_URL_NEZULATOON_API;
     var streatName = "Latham";
     var weaponName = "SpetialGun";
+    var apiURL = baseURL + '?streatName=' + streatName + '&weaponName=' + weaponName;
 
     const [weapon, setWeapon] = useState([])
         useEffect(() => {
-            fetch(baseURL + '?streatName=' + streatName + '&weaponName=' + weaponName, {method: 'GET'})
+            fetch(apiURL, {method: 'GET'})
             .then(res => res.json())
             .then(data => {
                 setWeapon(data)
