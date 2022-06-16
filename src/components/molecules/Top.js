@@ -1,15 +1,16 @@
 import React from 'react';
 import './Top.css';
-// import { Link } from "react-router-dom";
+import ApiFetch from './ApiFetch';
 
-const Top = () => {
-    return (
-      <>
-        <div>
-                <a href="https://ushinohi.com" class="btn btn--orange">Shoot</a>
-        </div>
-      </>
-    );
-  };
-  
+function Top() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <ApiFetch />
+        <a href="/" class="btn btn--orange">Shoot</a>
+      </header>
+    </div>
+  );
+}
+
 export default Top;
