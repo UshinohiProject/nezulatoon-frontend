@@ -2,7 +2,7 @@ import React from 'react';
 import { useGeolocated } from "react-geolocated";
 import './Top.css';
 import ApiFetch from './ApiFetch';
-import Map from './Map';
+// import Map from './Map';
 
 function Top() {
 
@@ -17,7 +17,7 @@ function Top() {
   return (
     <div className="App">
       <header className="App-header">
-        <Map isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} />
+        {/* <Map isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} /> */}
         <ApiFetch isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} />
         <a href="/" className="btn btn--orange">Shoot</a>
       </header>
