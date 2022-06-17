@@ -1,38 +1,47 @@
 import React, {useState, useEffect} from 'react'
+import './ApiFetch.css'
 
 const ApiFetch = (props) => {
-    const baseURL = process.env.REACT_APP_BASE_URL_NEZULATOON_API;
-    var latitude = 0;
-    var longitude = 0;
-    var coords = props.coords;
-    var streatName = "Latham";
-    var weaponName = "SpetialGun";
+    if (!props.isGeolocationAvailable) {
+        return (
+            <div>ご使用のブラウザではプレイできません。</div>
+        )
+    } else if (!props.isGeolocationEnabled) {
+        return (
+            <div>位置情報取得が拒否されています。</div>
+        )
+    } else if (props.coords) {
+        const baseURL = process.env.REACT_APP_BASE_URL_NEZULATOON_API;
+        var coords = props.coords;
+        var latitude = coords.latitude;
+        var longitude = coords.longitude;
+        var streatName = "Latham";
+        var weaponName = "SpetialGun";
 
-    if (coords) {
-        latitude = coords.latitude;
-        longitude = coords.longitude;
+        var apiURL = baseURL + '?streatName=' + streatName + '&weaponName=' + weaponName + '&latitude=' + latitude + '&longitude=' + longitude;
+
+        const [userStatus, setUserStatus] = useState([])
+            useEffect(() => {
+                fetch(apiURL, {method: 'GET'})
+                .then(res => res.json())
+                .then(data => {
+                    setUserStatus(data)
+                })
+            },[apiURL])
+
+        return (
+            <div>
+                <img className="map" src={userStatus.savedImageID} alt="map"></img>
+                <p>{userStatus.weaponName}</p>
+                <p>{userStatus.streatName}</p>
+
+            </div>
+        )
+    } else {
+        return (
+            <div>位置情報取得中&hellip; </div>
+        )
     }
-
-    var apiURL = baseURL + '?streatName=' + streatName + '&weaponName=' + weaponName + '&latitude=' + latitude + '&longitude=' + longitude;
-
-    const [userStatus, setUserStatus] = useState([])
-        useEffect(() => {
-            fetch(apiURL, {method: 'GET'})
-            .then(res => res.json())
-            .then(data => {
-                setUserStatus(data)
-            })
-        },[apiURL])
-
-    return (
-        <div>
-            <p>{userStatus.weaponName}</p>
-            <p>{userStatus.streatName}</p>
-            {/* <p>{userStatus.latitude}</p>
-            <p>{userStatus.longitude}</p> */}
-            
-        </div>
-    )
 }
 
 export default ApiFetch
