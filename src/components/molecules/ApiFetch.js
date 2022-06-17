@@ -28,7 +28,12 @@ const ApiFetch = (props) => {
                     setUserStatus(data)
                 })
             },[apiURL])
-
+        
+        while (!userStatus.savedImageID) {
+            return (
+                <div>位置情報取得中&hellip; </div>
+            )
+        }
         return (
             <div>
                 <img className="map" src={userStatus.savedImageID} alt="map"></img>
