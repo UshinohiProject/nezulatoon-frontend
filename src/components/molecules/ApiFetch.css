@@ -2,3 +2,9 @@
     width: 90vw;
     max-width: 512px;
 }
+
+.home-link {
+    font-size: 13px;
+    text-decoration: none;
+    color: #8492ad;
+}

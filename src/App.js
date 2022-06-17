@@ -4,6 +4,9 @@ import './App.css';
 
 import ScrollToTop from './components/molecules/ScrollToTop'
 import Top from './components/molecules/Top'
+import YaegakiShaonkai from './components/molecules/YaegakiShaonkai'
+import NezuGinza from './components/molecules/NezuGinza'
+import NezuMiyanaga from './components/molecules/NezuMiyanaga'
 
 const App = () => {
   return (
@@ -11,6 +14,9 @@ const App = () => {
       <ScrollToTop />
       <Routes>
         <Route path={`/`} element={<Top />} />
+        <Route path='/YaegakiShaonkai' element={<YaegakiShaonkai />}/>
+        <Route path='/NezuGinza' element={<NezuGinza />}/>
+        <Route path='/NezuMiyanaga' element={<NezuMiyanaga />}/>
       </Routes>
     </BrowserRouter>
   );

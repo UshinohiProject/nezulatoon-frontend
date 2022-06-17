@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from "react-router-dom";
 import './ApiFetch.css'
 
 const ApiFetch = (props) => {
@@ -15,8 +16,8 @@ const ApiFetch = (props) => {
         var coords = props.coords;
         var latitude = coords.latitude;
         var longitude = coords.longitude;
-        var streatName = "Latham";
-        var weaponName = "SpetialGun";
+        var streatName = props.streatName;
+        var weaponName = props.weaponName;
 
         var apiURL = baseURL + '?streatName=' + streatName + '&weaponName=' + weaponName + '&latitude=' + latitude + '&longitude=' + longitude;
 
@@ -36,6 +37,8 @@ const ApiFetch = (props) => {
                     <img className="map" src={userStatus.savedImageID} alt="map"></img>
                     <p>{userStatus.weaponName}</p>
                     <p>{userStatus.streatName}</p>
+                    <Link className="home-link" to={`/`}>商店街を再選択 &#8250;</Link>
+
 
                 </div>
             )
