@@ -21,27 +21,29 @@ const ApiFetch = (props) => {
         var apiURL = baseURL + '?streatName=' + streatName + '&weaponName=' + weaponName + '&latitude=' + latitude + '&longitude=' + longitude;
 
         const [userStatus, setUserStatus] = useState([])
-            useEffect(() => {
-                fetch(apiURL, {method: 'GET'})
-                .then(res => res.json())
-                .then(data => {
-                    setUserStatus(data)
-                })
-            },[apiURL])
-        
-        while (!userStatus.savedImageID) {
+        useEffect(() => {
+            fetch(apiURL, {method: 'GET'})
+            .then(res => res.json())
+            .then(data => {
+                setUserStatus(data)
+            })
+        },[apiURL])
+        console.log("calling API")
+    
+        if (userStatus.savedImageID) {
             return (
-                <div>位置情報取得中&hellip; </div>
+                <div>
+                    <img className="map" src={userStatus.savedImageID} alt="map"></img>
+                    <p>{userStatus.weaponName}</p>
+                    <p>{userStatus.streatName}</p>
+
+                </div>
+            )
+        } else {
+            return (
+                <div>マップ取得中&hellip; </div>
             )
         }
-        return (
-            <div>
-                <img className="map" src={userStatus.savedImageID} alt="map"></img>
-                <p>{userStatus.weaponName}</p>
-                <p>{userStatus.streatName}</p>
-
-            </div>
-        )
     } else {
         return (
             <div>位置情報取得中&hellip; </div>
