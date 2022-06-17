@@ -35,25 +35,17 @@ button.btn {
   letter-spacing: 0.1em;
   color: #212529;
   border-radius: 0.5rem;
+  margin-top: 15px;
 }
 
 /* 塗るボタン */
-.btn--orange,
-a.btn--orange {
+.btn--red,
+a.btn--red {
   color: #fff;
-  background-color: #eb6100;
+  background-color: #D80073;
 }
-.btn--orange:hover,
-a.btn--orange:hover {
+.btn--red:hover,
+a.btn--red:hover {
   color: #fff;
-  background: #f56500;
-}
-
-.team-name {
-  text-decoration: none;
-  color: #fff;
-}
-.team-name:hover {
-  text-decoration: none;
-  color: rgb(221, 221, 221);
+  background: #db559d;
 }

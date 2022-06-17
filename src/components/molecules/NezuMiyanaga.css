@@ -38,22 +38,13 @@ button.btn {
 }
 
 /* 塗るボタン */
-.btn--orange,
-a.btn--orange {
+.btn--green,
+a.btn--green {
   color: #fff;
-  background-color: #eb6100;
+  background-color: #60A917;
 }
-.btn--orange:hover,
-a.btn--orange:hover {
+.btn--green:hover,
+a.btn--green:hover {
   color: #fff;
-  background: #f56500;
-}
-
-.team-name {
-  text-decoration: none;
-  color: #fff;
-}
-.team-name:hover {
-  text-decoration: none;
-  color: rgb(221, 221, 221);
+  background: #77af3e;
 }
