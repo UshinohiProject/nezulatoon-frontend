@@ -14,6 +14,7 @@ import NezuMiyanagaDemo from './components/molecules/NezuMiyanagaDemo'
 import Nezlershot from './components/molecules/Nezlershot'
 import NezBlaster from './components/molecules/NezBlaster'
 import YaegakiShaonkaiDemoNezBlaster from './components/molecules/YaegakiShaonkaiDemoNezBlaster'
+import YaegakiShaonkaiDemoPainted from './components/molecules/YaegakiShaonkaiDemoPainted'
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path='/Nezlershot' element={<Nezlershot />}/>
         <Route path='/NezBlaster' element={<NezBlaster />}/>
         <Route path='/YaegakiShaonkaiDemoNezBlaster' element={<YaegakiShaonkaiDemoNezBlaster />}/>
+        <Route path='/YaegakiShaonkaiDemoPainted' element={<YaegakiShaonkaiDemoPainted />}/>
       </Routes>
     </BrowserRouter>
   );
