@@ -6,7 +6,7 @@ import ApiFetch from './ApiFetch';
 
 function NezuMiyanaga() {
     var streatName = "根津宮永商盛会";
-    var weaponName = "TraditionalGun";
+    var weaponName = "NormalGun";
 
   const { coords, isGeolocationAvailable, isGeolocationEnabled } =
   useGeolocated({
