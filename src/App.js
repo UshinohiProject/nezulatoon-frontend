@@ -8,12 +8,15 @@ import YaegakiShaonkai from './components/molecules/YaegakiShaonkai'
 import NezuGinza from './components/molecules/NezuGinza'
 import NezuMiyanaga from './components/molecules/NezuMiyanaga'
 import TopDemo from './components/molecules/TopDemo'
+import SelectTeamDemo from './components/molecules/SelectTeamDemo'
 import YaegakiShaonkaiDemo from './components/molecules/YaegakiShaonkaiDemo'
 import NezuGinzaDemo from './components/molecules/NezuGinzaDemo'
 import NezuMiyanagaDemo from './components/molecules/NezuMiyanagaDemo'
 import Nezlershot from './components/molecules/Nezlershot'
 import NezBlaster from './components/molecules/NezBlaster'
 import YaegakiShaonkaiDemoNezBlaster from './components/molecules/YaegakiShaonkaiDemoNezBlaster'
+import NezuGinzaDemoPainted from './components/molecules/NezuGinzaDemoPainted'
+import NezuMiyanagaDemoPainted from './components/molecules/NezuMiyanagaDemoPainted'
 import YaegakiShaonkaiDemoPainted from './components/molecules/YaegakiShaonkaiDemoPainted'
 
 const App = () => {
@@ -23,6 +26,7 @@ const App = () => {
       <Routes>
         <Route path={`/`} element={<Top />} />
         <Route path='/TopDemo' element={<TopDemo />}/>
+        <Route path='/SelectTeamDemo' element={<SelectTeamDemo />}/>
         <Route path='/YaegakiShaonkai' element={<YaegakiShaonkai />}/>
         <Route path='/NezuGinza' element={<NezuGinza />}/>
         <Route path='/NezuMiyanaga' element={<NezuMiyanaga />}/>
@@ -32,6 +36,8 @@ const App = () => {
         <Route path='/Nezlershot' element={<Nezlershot />}/>
         <Route path='/NezBlaster' element={<NezBlaster />}/>
         <Route path='/YaegakiShaonkaiDemoNezBlaster' element={<YaegakiShaonkaiDemoNezBlaster />}/>
+        <Route path='/NezuGinzaDemoPainted' element={<NezuGinzaDemoPainted />}/>
+        <Route path='/NezuMiyanagaDemoPainted' element={<NezuMiyanagaDemoPainted />}/>
         <Route path='/YaegakiShaonkaiDemoPainted' element={<YaegakiShaonkaiDemoPainted />}/>
       </Routes>
     </BrowserRouter>
