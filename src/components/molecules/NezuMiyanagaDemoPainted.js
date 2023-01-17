@@ -1,13 +1,13 @@
 import React from 'react';
 // import { useGeolocated } from "react-geolocated";
 import { Link } from "react-router-dom";
-import './YaegakiShaonkai.css';
+import './NezuMiyanaga.css';
 // import ApiFetch from './ApiFetch';
 // import Map from './Map';
 
 function YaegakiShaonkai() {
-    var streatName = "八重垣謝恩会";
-    var weaponName = "SpecialGun";
+    var streatName = "根津宮永商盛会";
+    var weaponName = "TraditionalGun";
 
 //   const { coords, isGeolocationAvailable, isGeolocationEnabled } =
 //   useGeolocated({
@@ -23,7 +23,7 @@ function YaegakiShaonkai() {
         {/* <Map isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} /> */}
         {/* <ApiFetch isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} streatName={streatName} weaponName={weaponName}/> */}
         <div>
-                    <img className="map" src={"http://drive.google.com/uc?export=view&id=1kLBGYlCdA1P4g9ixGBAvKfXE0pjhnb-h"} alt="map"></img>
+                    <img className="map" src={"http://drive.google.com/uc?export=view&id=1lYMB2uU7vyR0314rT1NoR0UGmhdRHBYo"} alt="map"></img>
                     {/* <img src={Map} alt="map"></img> */}
                     <p>{weaponName}</p>
                     <p>{streatName}</p>
@@ -31,7 +31,7 @@ function YaegakiShaonkai() {
 
 
                 </div>
-        <a href="/YaegakiShaonkaiDemoPainted" className="btn btn--red">Shoot</a>
+        <a href="/NezuMiyanagaDemoPainted" className="btn btn--green">Shoot</a>
       </header>
     </div>
   );

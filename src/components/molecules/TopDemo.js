@@ -1,31 +1,28 @@
 import React from 'react';
 // import { useGeolocated } from "react-geolocated";
 import { Link } from "react-router-dom";
-import './Top.css';
+import './TopDemo.css';
 // import ApiFetch from './ApiFetch';
 // import Map from './Map';
+import NezulatoonLogo from './img/logo/nezulatoon_logo.png'
 
 function TopDemo() {
 
-  // const { coords, isGeolocationAvailable, isGeolocationEnabled } =
-  // useGeolocated({
-  //     positionOptions: {
-  //         enableHighAccuracy: false,
-  //     },
-  //     userDecisionTimeout: 5000,
-  // });
-
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <Map isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} /> */}
-        {/* <ApiFetch isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} />
-        <a href="/" className="btn btn--orange">Shoot</a> */}
-        <h2>Select Your Team</h2>
-        <Link className="team-name" to={`/YaegakiShaonkaiDemo/`}>八重垣謝恩会 &#8250;</Link>
-        <Link className="team-name" to={`/NezuGinzaDemo/`}>根津銀座通り商睦会 &#8250;</Link>
-        <Link className="team-name" to={`/NezuMiyanagaDemo/`}>根津宮永商盛会 &#8250;</Link>
-      </header>
+      <div className="bg-nezukatoon-black">
+        <div className="opening-logo">
+          <img src={NezulatoonLogo} alt='the logo of nezulatoon' className='opening-logo-nezulatoon' />
+        </div>
+        <div className='start-buttons'>
+          <div className='start-button'>
+            <Link className="btn btn--orange btn--radius" to={`/SelectTeamDemo/`}>スタート</Link>
+          </div>
+          <div className='registration-button'>
+            <Link className="btn btn--gray btn--radius" to={`/TopDemo/`}>新規登録</Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

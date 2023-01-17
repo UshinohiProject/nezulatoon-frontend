@@ -8,7 +8,7 @@ import './NezuGinza.css';
 
 function NezuGinza() {
     var streatName = "根津銀座通り商睦会";
-    var weaponName = "FuntasticGun";
+    var weaponName = "SpecialGun";
 
 //   const { coords, isGeolocationAvailable, isGeolocationEnabled } =
 //   useGeolocated({
@@ -24,15 +24,15 @@ function NezuGinza() {
         {/* <Map isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} /> */}
         {/* <ApiFetch isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} streatName={streatName} weaponName={weaponName}/> */}
         <div>
-                    <img className="map" src={"http://drive.google.com/uc?export=view&id=1GJiTFDKeNOq3E0nih12S2eMtTAcK4UqC"} alt="map"></img>
+                    <img className="map" src={"http://drive.google.com/uc?export=view&id=1kLBGYlCdA1P4g9ixGBAvKfXE0pjhnb-h"} alt="map"></img>
                     {/* <img src={Map} alt="map"></img> */}
                     <p>{weaponName}</p>
                     <p>{streatName}</p>
-                    <Link className="home-link" to={`/TopDemo`}>商店街を再選択 &#8250;</Link>
+                    <Link className="home-link" to={`/SelectTeamDemo`}>商店街を再選択 &#8250;</Link>
 
 
                 </div>
-        <a href="/NezuGinzaDemo" className="btn btn--blue">Shoot</a>
+        <a href="/NezuGinzaDemoPainted" className="btn btn--blue">Shoot</a>
       </header>
     </div>
   );

@@ -23,11 +23,11 @@ function YaegakiShaonkai() {
         {/* <Map isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} /> */}
         {/* <ApiFetch isGeolocationAvailable={isGeolocationAvailable} isGeolocationEnabled={isGeolocationEnabled} coords={coords} streatName={streatName} weaponName={weaponName}/> */}
         <div>
-                    <img className="map" src={"http://drive.google.com/uc?export=view&id=1enCCBCvZWbkV3CQzeEL4nZRfWnHsTlxs"} alt="map"></img>
+                    <img className="map" src={"http://drive.google.com/uc?export=view&id=1lYMB2uU7vyR0314rT1NoR0UGmhdRHBYo"} alt="map"></img>
                     {/* <img src={Map} alt="map"></img> */}
                     <p>{weaponName}</p>
                     <p>{streatName}</p>
-                    <Link className="home-link" to={`/TopDemo`}>商店街を再選択 &#8250;</Link>
+                    <Link className="home-link" to={`/SelectTeamDemo`}>商店街を再選択 &#8250;</Link>
 
 
                 </div>
